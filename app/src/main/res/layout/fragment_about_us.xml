@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    tools:context=".activities.AboutUsFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:src="@drawable/profile"
+        app:civ_border_color="#5C5C5C"
+        app:civ_border_width="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dev_name"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:drawableLeft="@drawable/dev_user"
+        android:drawablePadding="@dimen/_10sdp"
+        android:gravity="left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:text="I'm Khalid El Ashe"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_image" />
+
+    <TextView
+        android:id="@+id/dev_life"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:drawableLeft="@drawable/cuntry"
+        android:drawablePadding="@dimen/_10sdp"
+        android:gravity="left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:text="I'm From Palestine in Gaza"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/dev_name"
+        app:layout_constraintTop_toBottomOf="@id/dev_name" />
+
+    <TextView
+        android:id="@+id/dev_facebook"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:drawableLeft="@drawable/facebook"
+        android:drawablePadding="@dimen/_10sdp"
+        android:gravity="left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:text="Facebook link"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/dev_life"
+        app:layout_constraintTop_toBottomOf="@id/dev_life" />
+
+    <TextView
+        android:id="@+id/dev_instagram"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:drawableLeft="@drawable/instagram"
+        android:drawablePadding="@dimen/_10sdp"
+        android:gravity="left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:text="Instagram link"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/dev_facebook"
+        app:layout_constraintTop_toBottomOf="@id/dev_facebook" />
+
+    <TextView
+        android:id="@+id/dev_github"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:drawableLeft="@drawable/github"
+        android:drawablePadding="@dimen/_10sdp"
+        android:gravity="left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:text="Github link"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/dev_instagram"
+        app:layout_constraintTop_toBottomOf="@id/dev_instagram" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_50sdp"
+        android:gravity="left"
+        android:paddingLeft="@dimen/_10sdp"
+        android:text="hi 🖐️ i am a mobile native developer \ni have experience 2 years for : \napi response, local database,\ndatabase no SQL ( firebase )"
+        android:textColor="@color/color_text_cooking"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintStart_toStartOf="@id/dev_github"
+        app:layout_constraintTop_toBottomOf="@id/dev_github" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

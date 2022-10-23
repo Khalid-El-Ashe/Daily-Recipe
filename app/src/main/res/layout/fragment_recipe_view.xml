@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".activities.RecipeViewFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/img_back"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:src="@drawable/back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_recipe_food_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="Breakfast"
+            android:textColor="@color/colot_text_forgot_password"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="@id/img_back"
+            app:layout_constraintTop_toBottomOf="@id/img_back" />
+
+        <TextView
+            android:id="@+id/text_recipe_food_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/abril_fatface"
+            android:text="French Toast with Berries"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintStart_toStartOf="@id/text_recipe_food_type"
+            app:layout_constraintTop_toBottomOf="@id/text_recipe_food_type" />
+
+        <TextView
+            android:id="@+id/text_recipe_food_calories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="120 Calories"
+            android:textColor="@color/btn_background_filter"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="@id/text_recipe_food_name"
+            app:layout_constraintTop_toBottomOf="@id/text_recipe_food_name" />
+
+        <TextView
+            android:id="@+id/text_recipe_food_mins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:drawableLeft="@drawable/time"
+            android:drawablePadding="@dimen/_10sdp"
+            android:text="10 mins"
+            android:textColor="@color/color_text_cooking"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="@id/text_recipe_food_calories"
+            app:layout_constraintTop_toBottomOf="@id/text_recipe_food_calories" />
+
+        <TextView
+            android:id="@+id/text_recipe_food_serving"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:drawableLeft="@drawable/serving"
+            android:drawablePadding="@dimen/_10sdp"
+            android:text="1 Serving"
+            android:textColor="@color/color_text_cooking"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="@id/text_recipe_food_mins"
+            app:layout_constraintTop_toBottomOf="@id/text_recipe_food_mins" />
+
+        <ImageView
+            android:id="@+id/image_recipe_food"
+            android:layout_width="@dimen/_300sdp"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_marginStart="@dimen/_50sdp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/image"
+            app:layout_constraintStart_toEndOf="@id/text_recipe_food_mins"
+            app:layout_constraintTop_toBottomOf="@id/text_recipe_food_name" />
+
+
+        <TextView
+            android:id="@+id/text_recipe_food_ingredients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/archivo"
+            android:text="Ingredients"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toStartOf="@id/text_recipe_food_serving"
+            app:layout_constraintTop_toBottomOf="@id/image_recipe_food" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_recipe_food_ingredients"
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/text_recipe_food_ingredients"
+            app:layout_constraintTop_toBottomOf="@id/text_recipe_food_ingredients"
+            tools:listitem="@layout/item_food_ingredients" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include layout="@layout/layout_bottom_sheet_recipe" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

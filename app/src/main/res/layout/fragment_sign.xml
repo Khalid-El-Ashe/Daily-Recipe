@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mask_group9"
+    tools:context=".activities.SignFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000" />
+
+    <ImageView
+        android:id="@+id/oval_image"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:layout_marginBottom="@dimen/_300sdp"
+        android:src="@drawable/ovel_img_splash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_45sdp"
+        android:src="@drawable/mask_group2"
+        app:layout_constraintBottom_toBottomOf="@id/oval_image"
+        app:layout_constraintEnd_toEndOf="@id/oval_image"
+        app:layout_constraintStart_toStartOf="@id/oval_image"
+        app:layout_constraintTop_toTopOf="@id/oval_image" />
+
+    <TextView
+        android:id="@+id/text_daily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="Daily Recipe"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_34ssp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="@id/oval_image"
+        app:layout_constraintEnd_toEndOf="@id/oval_image"
+        app:layout_constraintStart_toStartOf="@id/oval_image"
+        app:layout_constraintTop_toTopOf="@id/oval_image" />
+
+    <TextView
+        android:id="@+id/text_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15ssp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/oval_image" />
+
+
+    <EditText
+        android:id="@+id/sign_email_address"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:background="@drawable/edit_text_border"
+        android:drawableLeft="@drawable/email"
+        android:drawablePadding="@dimen/_10sdp"
+        android:hint="Email Address"
+        android:inputType="textEmailAddress"
+        android:paddingLeft="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/color_text_cooking"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_register" />
+
+
+    <EditText
+        android:id="@+id/sign_password"
+        android:layout_width="@dimen/_270sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginStart="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_30sdp"
+        android:background="@drawable/edit_text_border"
+        android:drawableLeft="@drawable/password"
+        android:drawablePadding="@dimen/_10sdp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:paddingLeft="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:textColorHint="@color/color_text_cooking"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_email_address" />
+
+    <TextView
+        android:id="@+id/text_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:text="Forgot Password?"
+        android:textColor="@color/colot_text_forgot_password"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="@id/sign_password"
+        app:layout_constraintTop_toBottomOf="@id/sign_password" />
+
+    <Button
+        android:id="@+id/btn_sign"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_marginBottom="@dimen/_120sdp"
+        android:background="@drawable/btn_register"
+        android:text="Sign In"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_16ssp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/layout_new_account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/btn_sign"
+        app:layout_constraintStart_toStartOf="@id/btn_sign"
+        app:layout_constraintTop_toBottomOf="@id/btn_sign">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:text="Don't have an account ?"
+            android:textColor="@color/color_text_cooking"
+            android:textSize="@dimen/_14sdp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register"
+            android:textColor="@color/color_btn_register"
+            android:textSize="@dimen/_14sdp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

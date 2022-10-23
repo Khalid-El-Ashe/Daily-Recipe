@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    android:backgroundTint="@color/color_search_back"
+    app:cardCornerRadius="@dimen/_15sdp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/image_fav_food"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="@dimen/_80sdp"
+            android:src="@drawable/image_fav"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/img_fav_like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:src="@drawable/liked"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_fav_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:text="Breakfast"
+            android:textColor="@color/colot_text_forgot_password"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toEndOf="@id/image_fav_food"
+            app:layout_constraintTop_toTopOf="@id/image_fav_food" />
+
+        <TextView
+            android:id="@+id/text_fav_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:text="Blueberry Muffins"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintStart_toEndOf="@id/image_fav_food"
+            app:layout_constraintTop_toBottomOf="@id/text_fav_type" />
+
+        <TextView
+            android:id="@+id/text_fav_calories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:text="120 Calories"
+            android:textColor="@color/color_btn_register"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toEndOf="@id/image_fav_food"
+            app:layout_constraintTop_toBottomOf="@id/text_fav_name" />
+
+        <TextView
+            android:id="@+id/text_fav_mins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_5sdp"
+            android:drawableLeft="@drawable/time"
+            android:drawablePadding="@dimen/_5sdp"
+            android:text="10 mins"
+            android:textColor="@color/color_text_cooking"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toEndOf="@id/image_fav_food"
+            app:layout_constraintTop_toBottomOf="@id/text_fav_calories" />
+
+        <TextView
+            android:id="@+id/text_fav_serving"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:drawableLeft="@drawable/serving"
+            android:drawablePadding="@dimen/_5sdp"
+            android:text="1 Serving"
+            android:textColor="@color/color_text_cooking"
+            android:textSize="@dimen/_10ssp"
+            app:layout_constraintStart_toEndOf="@id/text_fav_mins"
+            app:layout_constraintTop_toBottomOf="@id/text_fav_calories" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

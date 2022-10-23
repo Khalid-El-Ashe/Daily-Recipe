@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottomSheetContainer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bottom_sheet_filter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_3sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/view_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_title_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:text="Filter"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_20ssp"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toTopOf="@id/constraint" />
+
+        <TextView
+            android:id="@+id/text_reset_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_25sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:text="Reset"
+            android:textColor="@color/color_btn_register"
+            android:textSize="@dimen/_14ssp"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintTop_toTopOf="@id/constraint" />
+
+        <TextView
+            android:id="@+id/text_meal_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="Meal"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/text_title_filter"
+            app:layout_constraintTop_toBottomOf="@id/text_title_filter" />
+
+        <LinearLayout
+            android:id="@+id/containers_buttons"
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@id/text_meal_filter">
+
+            <Button
+                android:id="@+id/btn_filter_breakfast"
+                android:layout_width="@dimen/_88sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_clicked_background_filter"
+                android:text="Breakfast"
+                android:textAllCaps="false"
+                android:textColor="@color/color_btn_register"
+                android:textSize="@dimen/_12ssp" />
+
+            <Button
+                android:id="@+id/btn_filter_brunch"
+                android:layout_width="@dimen/_88sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_background_filter"
+                android:text="Brunch"
+                android:textAllCaps="false"
+                android:textColor="@color/color_text_cooking"
+                android:textSize="@dimen/_12ssp" />
+
+            <Button
+                android:id="@+id/btn_filter_lunch"
+                android:layout_width="@dimen/_88sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_background_filter"
+                android:text="Lunch"
+                android:textAllCaps="false"
+                android:textColor="@color/color_text_cooking"
+                android:textSize="@dimen/_12ssp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_filter_dinner"
+            android:layout_width="@dimen/_88sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_background_filter"
+            android:text="Dinner"
+            android:textAllCaps="false"
+            android:textColor="@color/color_text_cooking"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="@id/containers_buttons"
+            app:layout_constraintTop_toBottomOf="@id/containers_buttons" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="@dimen/_260sdp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:background="@color/color_text_cooking"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_filter_dinner" />
+
+        <TextView
+            android:id="@+id/text_course_filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:text="Course"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/text_title_filter"
+            app:layout_constraintTop_toBottomOf="@id/view2" />
+
+        <LinearLayout
+            android:id="@+id/containers_buttons2"
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@id/text_course_filter">
+
+            <Button
+                android:id="@+id/btn_filter_soup"
+                android:layout_width="@dimen/_88sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_clicked_background_filter"
+                android:text="Soup"
+                android:textAllCaps="false"
+                android:textColor="@color/color_btn_register"
+                android:textSize="@dimen/_12ssp" />
+
+            <Button
+                android:id="@+id/btn_filter_appetizer"
+                android:layout_width="@dimen/_88sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_background_filter"
+                android:text="Appetizer"
+                android:textAllCaps="false"
+                android:textColor="@color/color_text_cooking"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="@id/containers_buttons"
+                app:layout_constraintTop_toBottomOf="@id/containers_buttons" />
+
+            <Button
+                android:id="@+id/btn_filter_starter"
+                android:layout_width="@dimen/_88sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_background_filter"
+                android:text="Starter"
+                android:textAllCaps="false"
+                android:textColor="@color/color_text_cooking"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="@id/containers_buttons"
+                app:layout_constraintTop_toBottomOf="@id/containers_buttons" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/containers_buttons3"
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="@id/constraint"
+            app:layout_constraintStart_toStartOf="@id/constraint"
+            app:layout_constraintTop_toBottomOf="@id/containers_buttons2">
+
+            <Button
+                android:id="@+id/btn_filter_main"
+                android:layout_width="@dimen/_88sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_background_filter"
+                android:text="Main Dish"
+                android:textAllCaps="false"
+                android:textColor="@color/color_text_cooking"
+                android:textSize="@dimen/_12ssp" />
+
+            <Button
+                android:id="@+id/btn_filter_side"
+                android:layout_width="@dimen/_88sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_background_filter"
+                android:text="side"
+                android:textAllCaps="false"
+                android:textColor="@color/color_text_cooking"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="@id/containers_buttons"
+                app:layout_constraintTop_toBottomOf="@id/containers_buttons" />
+
+            <Button
+                android:id="@+id/btn_filter_dessert"
+                android:layout_width="@dimen/_88sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:layout_weight="1"
+                android:background="@drawable/btn_background_filter"
+                android:text="Dessert"
+                android:textAllCaps="false"
+                android:textColor="@color/color_text_cooking"
+                android:textSize="@dimen/_12ssp"
+                app:layout_constraintStart_toStartOf="@id/containers_buttons"
+                app:layout_constraintTop_toBottomOf="@id/containers_buttons" />
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="@dimen/_260sdp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginStart="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_30sdp"
+            android:background="@color/color_text_cooking"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/containers_buttons3" />
+
+        <Button
+            android:id="@+id/btn_filter_apply"
+            android:layout_width="@dimen/_215sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:background="@drawable/btn_register"
+            android:text="Apply"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_filter_apply" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

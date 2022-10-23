@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mask_group9"
+    android:orientation="vertical"
+    tools:context=".activities.AddNewItemFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CD000000"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/img_save_new_item"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="right"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:src="@drawable/ic_check" />
+
+            <ImageView
+                android:id="@+id/img_add_new_item_back"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:text="Create new Product"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_16ssp" />
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ImageView
+            android:id="@+id/img_add_new_item_image"
+            android:layout_width="@dimen/_270sdp"
+            android:layout_height="@dimen/_180sdp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_5sdp"
+            android:background="@drawable/image_border"
+            android:src="@drawable/ic_photo" />
+
+
+        <EditText
+            android:id="@+id/edit_add_type_item"
+            android:layout_width="@dimen/_270sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/edit_text_border"
+            android:hint="type"
+            android:inputType="text"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_text_cooking"
+            android:textSize="@dimen/_14ssp" />
+
+        <EditText
+            android:id="@+id/edit_add_name_item"
+            android:layout_width="@dimen/_270sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/edit_text_border"
+            android:hint="name"
+            android:inputType="text"
+            android:paddingLeft="@dimen/_10sdp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_text_cooking"
+            android:textSize="@dimen/_14ssp" />
+
+        <LinearLayout
+            android:layout_width="@dimen/_270sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/edit_add_calories_item"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_border"
+                android:hint="calories"
+                android:inputType="number"
+                android:paddingLeft="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/color_text_cooking"
+                android:textSize="@dimen/_14ssp" />
+
+            <EditText
+                android:id="@+id/edit_add_mins_item"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_border"
+                android:hint="mins"
+                android:inputType="number"
+                android:paddingLeft="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/color_text_cooking"
+                android:textSize="@dimen/_14ssp" />
+
+            <EditText
+                android:id="@+id/edit_add_serving_item"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_2sdp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_text_border"
+                android:hint="serving"
+                android:inputType="number"
+                android:paddingLeft="@dimen/_10sdp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/color_text_cooking"
+                android:textSize="@dimen/_14ssp" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edit_add_description_item"
+            android:layout_width="@dimen/_270sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/edit_text_border"
+            android:gravity="start"
+            android:hint="Description"
+            android:inputType="text"
+            android:maxEms="20"
+            android:maxLines="1"
+            android:padding="@dimen/_10sdp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/color_text_cooking"
+            android:textSize="@dimen/_14ssp" />
+    </LinearLayout>
+
+</LinearLayout>

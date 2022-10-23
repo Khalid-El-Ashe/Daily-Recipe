@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/horizontal_container"
+    android:layout_width="@dimen/_190sdp"
+    android:layout_height="wrap_content"
+    android:background="@color/black">
+
+    <View
+        android:layout_width="@dimen/_160sdp"
+        android:layout_height="@dimen/_220sdp"
+        android:background="@drawable/item_recycler_food"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/img_like"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_16sdp"
+        android:layout_margin="@dimen/_20sdp"
+        android:src="@drawable/love"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_food"
+        android:layout_width="@dimen/_144sdp"
+        android:layout_height="@dimen/_86sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_food_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="Breakfast"
+        android:textColor="@color/colot_text_forgot_password"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="@id/img_like"
+        app:layout_constraintTop_toBottomOf="@id/image_food" />
+
+    <TextView
+        android:id="@+id/text_food_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="French Toast with Berries"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintStart_toStartOf="@id/img_like"
+        app:layout_constraintTop_toBottomOf="@id/text_food_type" />
+
+    <TextView
+        android:id="@+id/text_food_calories"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="120 Calories"
+        android:textColor="@color/color_btn_register"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintStart_toStartOf="@id/img_like"
+        app:layout_constraintTop_toBottomOf="@id/text_food_name" />
+
+
+    <TextView
+        android:id="@+id/text_food_mins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:drawableLeft="@drawable/time"
+        android:drawablePadding="@dimen/_5sdp"
+        android:text="10 mins"
+        android:textColor="@color/color_text_cooking"
+        android:textSize="@dimen/_10ssp"
+
+        app:layout_constraintStart_toStartOf="@id/text_food_calories"
+        app:layout_constraintTop_toBottomOf="@id/text_food_calories" />
+
+    <TextView
+        android:id="@+id/text_food_serving"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5ssp"
+        android:drawableLeft="@drawable/serving"
+        android:drawablePadding="@dimen/_5sdp"
+        android:text="1 Serving"
+        android:textColor="@color/color_text_cooking"
+        android:textSize="@dimen/_10ssp"
+        app:layout_constraintBottom_toBottomOf="@id/text_food_mins"
+        app:layout_constraintStart_toEndOf="@id/text_food_mins"
+        app:layout_constraintTop_toBottomOf="@id/text_food_calories" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
